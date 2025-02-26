@@ -4,17 +4,25 @@ import com.mcl.Interfaces.AccionesDeportivas;
 import com.mcl.Enums.Equipos;
 import com.mcl.Enums.Posiciones;
 
+import java.util.ArrayList;
+
 public class Jugador extends MutxamelFC implements AccionesDeportivas {
 
     private Equipos categoria;
     private int dorsal;
     private Posiciones posicion;
+    private ArrayList<Integer> dorsales_usados;
 
     public Jugador(String nombre, int edad, Posiciones posicion, int dorsal, Equipos categoria) {
         super(nombre, edad);
         this.posicion = posicion;
         this.dorsal = dorsal;
         this.categoria = categoria;
+        dorsales_usados = new ArrayList<>();
+    }
+
+    public void anadirDorsal(int dorsal){
+        dorsales_usados.add(dorsal);
     }
 
     public Equipos getCategoria() {
