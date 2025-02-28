@@ -6,44 +6,34 @@ import java.util.ArrayList;
 
 public abstract class MutxamelFC implements FuncionesIntegrantes {
 
-    private String nombre;
-    private int edad;
-    private ArrayList<Jugador> jugadores;
+    private String nombre; //variables
+    private int edad; //variables
 
-    public MutxamelFC(String nombre, int edad) {
+    public MutxamelFC(String nombre, int edad) { //constructor
         this.nombre = nombre;
         this.edad = edad;
-        jugadores = new ArrayList<>();
+
     }
 
     public String getNombre() {
         return nombre;
-    }
+    } //obten nombre
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
+    } //cambia nombre
 
     public int getEdad() {
         return edad;
-    }
+    } //obten edad
 
     public void setEdad(int edad) {
         this.edad = edad;
-    }
+    } //cambia edad
 
-    public void anadirJugador(Jugador jugador){
 
-        for (Jugador jugador1: jugadores){
 
-            if (jugador.equals(jugador1)){
-                continue;
-            }else {
-                jugadores.add(jugador);
-            }
 
-        }
 
-    }
 
 }
